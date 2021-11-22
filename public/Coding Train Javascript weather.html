@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Fetch JSON from API and map Lat & Lon</title>
+  </head>
+  <body>
+    <!--Title to the page:-->
+    <h1>What's the weather?</h1>
+
+    <!--The paragraphs display your current location-->
+    <p>
+        latitude: <span id="lat"></span><br/>
+        longitude: <span id="lon"></span>
+    </p>
+
+    <div id ="issMap"></div>
+
+    <script>
+        
+        
+        const weather_api_url = 'https://api.weather.gov/points/'
+
+        if ('geolocation' in navigator) {
+            /* geolocation is available */
+            console.log('geolocation available');
+
+            navigator.geolocation.getCurrentPosition(function(position){
+                console.log(position.coords.latitude);
+                console.log(position.coords.longitude);
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+
+                document.getElementById('lat').textContent = lat;
+                document.getElementById('lon').textContent = lon;
+                
+
+               });
+
+        } else {
+            /* geolocation IS NOT available */
+            console.log('geolocation NOT available');
+        }
+
+
+        const geoData = beginGeoLocate();
+        console.log('geodata that was found ', geoData);
+
+        let firstTime = true;
+
+        async function getWeather(){
+            // await the function getting the data from the API
+            const response = await fetch(weather_api_url);
+            console.log(response);
+            
+            // convert the data from the api to a javascript object
+            const data = await response.json();
+
+            console.log(data);
+
+            const {latitude, longitude} = data;
+
+            if (firstTime) {
+              mymap.setView([latitude, longitude], 2);
+              firstTime = false;
+            }         
+        }
+
+        // AT END CALL GET ISS FUNCTION TO REACH API
+        getWeather();
+        // after first call wait and call the function again
+        setInterval(getWeather, 1000);
+
+    </script>
+  </body>
+
+</html>

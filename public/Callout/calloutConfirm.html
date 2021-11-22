@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        
+        <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script src="../auxScripts.js"></script>
+
+    </head>
+    <body>
+        <h1>Pittsburgh Stormwater Scout</h1>
+        <div>
+            <a href="/">Home</a> | <a href="/Callout/index.html">Callout an Issue!</a> | 
+            <a href="/Callout_Log/index.html">View Callouts</a> | <a href="/Contact/index.html">Contact</a>
+        </div>
+
+        <br>
+
+        <p>
+            Almost there! <br/>
+            Please review the information below and add a few more supporting details, such as a desription of the 
+            issue that you have witnessed.  <br/><br/>
+            If there is an issue with the photo or any of the information below, select 'Cancel Callout' below and start again. <br/> <br/>
+            Please include a proper email address. This will NOT be displayed to the public with your callout
+            but is to 1. discourage random posts and 2. a means of contact if there are any questions about your post.
+        </p>
+
+        <br>
+
+        <img id="calloutImage"></img>
+
+        <p>
+            latitude:  <span id="latitude"></span><br />
+            longitude: <span id="longitude"></span>
+        </p>
+
+        <p>
+            Weather from online forecast using your location: <br/> <br/>
+            Current Weather:  <span id="forecast"></span><br />
+            Current Temperature:  <span id="temperature"></span><br />
+            Current Air Quality:  <span id="air_quality"></span><br />        
+        </p> 
+
+        <br>
+        <table>
+            <tr>
+                <td><label for="txaWeather">Recent Rainfall/Weather Description:</label></td>
+                <td>
+                    <textarea id="txaWeather" name="Weather Input"
+                        rows="5" cols="33"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="txaCalloutDescr">*Callout/Issue Description: <br/> 
+                    (Important!)</label></td>
+
+                <td>
+                    <textarea id="txaCalloutDescr" name="Callout Description"
+                        rows="5" cols="33"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="txaComments">Additional Comments: <br/>
+                    (not shown to public)</label></td>
+                <td>
+                    <textarea id="txaComments" name="User Comments"
+                        rows="5" cols="33"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="txaEmail">*Email Address:</label></td>
+                <td>
+                    <textarea id="txaEmail" name="User Email"
+                        rows="1" cols="33" style="height: 30px;"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><label>* = required fields</label></td>
+            </tr>
+        </table>
+
+        <br>
+        <!--BUTTON that the user presses to submit the current displayed data to the database-->
+        <button id="SubmitCallout">Submit Callout</button>
+        <button id="returnToCallout">Cancel Callout</button>
+        <script src="calloutConfirm.js"></script>
+
+    </body>
+</html>

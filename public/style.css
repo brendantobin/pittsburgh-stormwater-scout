@@ -1,0 +1,138 @@
+:root{
+    --main-bg-color: rgba(231, 240, 238, 0.808);
+    --main-brd-color: rgb(234, 241, 243);
+
+    --main-app-width: device-width;
+    --main-app-alignment: center;
+}
+
+h1{
+    text-align: var(--main-app-alignment);
+    padding: 0px;
+    font: bold 60px "Oswald";
+    width: var(--main-app-width);
+    max-width: 640px;
+    /* background-color: rgba(255,255,255,0.5); */
+}
+
+h2{
+    text-align: var(--main-app-alignment);
+    padding: 0px;
+    font: italic 24px "Oswald";
+    width: var(--main-app-width);
+    max-width: 640px;
+    /* background-color: var(--main-bg-color);
+    border: 2px solid var(--main-brd-color);
+    border-radius: 18px; */
+}
+
+body{
+    text-align: var(--main-app-alignment);
+    padding: 0px;
+    width: var(--main-app-width);
+    max-width: 640px;
+    /* background-image: url("flowerbkg.jpg");
+    background-repeat: repeat;
+    background-position: center; */
+    /* height: 10px;
+    background-color: #033d3f; */
+}
+
+
+div{
+    text-align: var(--main-app-alignment);
+    padding: 5px;
+    background-color: var(--main-bg-color);   
+    /* border: 2px solid var(--main-brd-color); */
+    border-radius: 10px;
+    font-size: 18px;
+
+    width: var(--main-app-width);
+    max-width: 640px;
+
+}
+
+div div {
+    text-align: var(--main-app-alignment);
+    background-color: rgba(0,0,0,0) ;
+    /* border: none; */
+    /* border: 2px solid var(--main-brd-color); */
+
+    width: var(--main-app-width);
+    max-width: 640px;
+}
+
+p {
+    text-align: var(--main-app-alignment);
+    padding: 10px;
+    background-color: var(--main-bg-color);   
+    /* border: 2px solid var(--main-brd-color); */
+    border-radius: 18px;
+    font-size: medium;
+
+    width: var(--main-app-width);
+    max-width: 640px;
+}
+
+
+img {
+    position: relative;
+    left: 0%;
+    margin-left: -(half ot the image width)px;
+    width: var(--main-app-width);
+    max-width: 600px;
+    border: 0;
+    border-radius: 0;
+}
+
+.dataImages{
+
+    border: 2px solid var(--main-brd-color);
+    border-radius: 36px;
+}
+
+#canvas-container {
+    width: 100%;
+    text-align:center;
+}
+ 
+canvas {
+    display: inline;
+}
+
+table{
+    width: 100%;
+    /* width: var(--main-app-width); */
+}
+
+td {
+    vertical-align: top;
+}
+
+th {
+    text-align: left;
+}
+
+label {
+    /* display: block; */
+    height: 60px;
+    width: 10% ; 
+}
+
+input {
+    line-height: 20px;
+    height: 20px;
+    width: 98%; 
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    /* padding: 12px 20px; */
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }

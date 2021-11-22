@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <script scr="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+            integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""
+        ></script>
+        <style>
+            #checkinMap {
+                height: 240px;
+                margin: 8px 0px;
+            }
+
+        </style>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="mapScripts.js"></script>
+        
+    </head>
+    <body>
+        <style>
+            body {
+              background-image: url('PittsburghImg.png');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-position-y: top;
+              background-position-x: left;
+              background-size: 40%;
+            }
+        </style>
+        <h1>
+            Pittsburgh Stormwater Scout
+        </h1>
+        <h2>help keep an eye on our water systems</h2>
+        <div>
+            <a href="/">Home</a> | <a href="/Callout/index.html">Callout an Issue!</a> | 
+            <a href="/Callout_Log/index.html">View Callouts</a> | <a href="/Contact/index.html">Contact</a>
+        </div>
+
+        <br>
+        <script src="sketch.js"></script>
+
+    </body>
+</html>

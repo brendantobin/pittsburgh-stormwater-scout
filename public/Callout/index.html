@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        
+        <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+            integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""
+        ></script>
+        <style>
+            #checkinMap {
+                height: 240px;
+                margin: 8px 0px;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+
+
+    </head>
+    <body>
+        <h1>Pittsburgh Stormwater Scout</h1>
+
+        <div>
+            <a href="/">Home</a> | <a href="/Callout/index.html">Callout an Issue!</a> | 
+            <a href="/Callout_Log/index.html">View Callouts</a> | <a href="/Contact/index.html">Contact</a>
+        </div>
+
+        <br>
+        <p>
+            Use the view finder below to capture an image of the stormwater issue you have located.
+            If you would like to only include a description and a location, press the skip photo capture button instead.  <span id="CalloutExplanation"></span>
+        </p>
+        <br>
+        
+        <div id='captureContainer'>
+            <button id="capturePhoto">Capture Photo</button>
+            <button id="skipPhtoto">Skip Photo Capture</button>
+        </div>
+
+        <br>
+
+        <script src="Callout.js"></script>
+    </body>
+</html>

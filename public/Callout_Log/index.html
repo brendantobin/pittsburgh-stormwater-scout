@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+            integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""
+        ></script>
+        <style>
+            #checkinMap {
+                height: 240px;
+                margin: 8px 0px;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+
+        <script src="../auxScripts.js"></script>
+        <script src="../mapScripts.js"></script>
+    </head>
+    <body>
+        <h1>
+            View Past Callouts
+        </h1>
+        <div id="navigationBar">
+            <a href="/">Home</a> | <a href="/Callout/index.html">Callout an Issue!</a> | 
+            <a href="/Callout_Log/index.html">View Callouts</a> | <a href="/Contact/index.html">Contact</a>
+        </div>
+        <!-- <div><a href="/">submit check-in</a> | <a href="index.html">view check-ins</a></div> -->
+        <!--MAP element displayed on the page-->
+        <div id="checkinMap"></div>
+        <br>
+        <!--BUTTON that the user presses to submit the current displayed data to the database-->
+        <button id="DatabaseList">Show Database List</button>
+        <script src="callout_log.js"></script>
+        <br>
+        <br>
+
+    </body>
+
+    
+</html>
